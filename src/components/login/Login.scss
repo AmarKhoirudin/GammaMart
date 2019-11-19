@@ -1,0 +1,78 @@
+.login {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  height: 500px;
+  width: 350px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 3%;
+  .logo {
+    p {
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 25px;
+    }
+    margin: 50px 120px;
+    img {
+      height: 110px;
+    }
+  }
+  input {
+    display: flex;
+    height: 50px;
+    width: 250px;
+    margin: 20px 50px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    outline: none;
+    padding-left: 50px;
+  }
+  input:focus {
+    outline: none;
+    font-size: 16px;
+    border-bottom: 3px solid lightgreen;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+  .user {
+    position: absolute;
+    left: 60px;
+    margin-top: -60px;
+    font-size: 33px;
+    color: #00e389ff;
+  }
+  .pass {
+    position: absolute;
+    left: 60px;
+    margin-top: -55px;
+    font-size: 25px;
+    color: #00e389ff;
+  }
+  .login-btn {
+    border: 1px solid lightgreen;
+    background: #00e389ff;
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: white;
+  }
+  .login-btn:hover {
+    background: white;
+    color: #00e389ff;
+  }
+  .login-btn:focus {
+    background: #00e389ff;
+    color: white;
+  }
+}
