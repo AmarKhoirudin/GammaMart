@@ -10,7 +10,7 @@
       height: 50px;
     }
     span {
-      font-family: "Courier New", Courier, monospace;
+      font-family: 'Courier New', Courier, monospace;
       font-size: 40px;
       letter-spacing: 5px;
       position: absolute;
@@ -20,7 +20,7 @@
   }
   .link {
     text-transform: uppercase;
-    letter-spacing: 1px;
+
     ul {
       margin-top: -40px;
       margin-right: 100px;
@@ -33,7 +33,46 @@
       }
     }
   }
+  .bar {
+    display: none;
+  }
   .active {
     color: green;
+  }
+}
+
+// mobile view
+
+@media (max-width: 768px) {
+  .header {
+    .brand {
+      display: flex;
+      justify-content: center;
+      margin-left: -200px;
+    }
+    .bar {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 25px;
+      color: #00e389ff;
+    }
+    .link {
+      display: none;
+      position: absolute;
+      top: 120px;
+      left: -40px;
+      // display: none;
+      ul {
+        display: block;
+        li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .link-aktif {
+      display: block;
+    }
   }
 }
