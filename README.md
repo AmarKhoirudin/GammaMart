@@ -4,10 +4,14 @@
 
 this project was created with **_CreateReactApp_**
 
-Github : {
+## Github :
 
-UI/UX : /albae69
-FRONTEND DEVELOPER: /amarkhoirudin
-BACKEND DEVELOPER: /aldyrifaldi
-BACKEND DEVELOPER: /almishbah
-}
+### UI/UX : /albae69
+
+### FRONTEND DEVELOPER: /amarkhoirudin
+
+### BACKEND DEVELOPER: /aldyrifaldi
+
+### BACKEND DEVELOPER: /almishbah
+
+### MOBILE REACT NATIVE: /
