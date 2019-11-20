@@ -13,7 +13,7 @@ const Header = ({ showNav, className }) => {
   return (
     <div className='header'>
       <div className='brand'>
-        <Link to='/' exact>
+        <Link to='/' exact activeClassName='home-active'>
           <img src={Brand} alt='' />
           <span>GPOS</span>
         </Link>
@@ -27,17 +27,17 @@ const Header = ({ showNav, className }) => {
         <ul>
           <li>
             <Link to='/about' activeClassName='active'>
-              Tentang Kami
+              about
             </Link>
           </li>
           <li>
             <Link to='/login' activeClassName='active'>
-              Masuk
+              login
             </Link>
           </li>
           <li>
             <Link to='/register' activeClassName='active'>
-              coba gratis
+              demo
             </Link>
           </li>
         </ul>
