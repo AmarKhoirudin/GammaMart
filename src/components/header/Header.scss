@@ -1,25 +1,29 @@
 .header {
-  height: 50px;
+  position: absolute;
+  top: 20px;
+  height: 60px;
   width: 100%;
-  background: transparent;
   .brand {
+    a {
+      text-decoration: none;
+      color: black;
+    }
     img {
       margin-left: 50px;
       margin-top: 5px;
       height: 50px;
     }
     span {
-      font-family: "Courier New", Courier, monospace;
       font-size: 40px;
       letter-spacing: 5px;
       position: absolute;
-      top: 10px;
+      top: 5px;
       margin-left: 10px;
     }
   }
   .link {
     text-transform: uppercase;
-    letter-spacing: 1px;
+
     ul {
       margin-top: -40px;
       margin-right: 100px;
@@ -29,10 +33,69 @@
       li a {
         margin-left: 50px;
         text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2px;
       }
     }
   }
+  .bar {
+    display: none;
+  }
   .active {
     color: green;
+    padding: 3px 15px;
+    border: 3px solid rgb(0, 253, 152);
+    border-radius: 20px;
+  }
+}
+
+// mobile view
+
+@media (max-width: 768px) {
+  .header {
+    .active {
+      padding: 0;
+      border: none;
+    }
+    .brand {
+      display: flex;
+      justify-content: center;
+      margin-left: -200px;
+    }
+    .bar {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 25px;
+      color: #00e389ff;
+    }
+    .link {
+      display: none;
+      position: absolute;
+      top: 120px;
+      left: -40px;
+      animation: link 0.5s ease-in-out;
+      ul {
+        display: block;
+        li {
+          margin-top: 20px !important;
+          color: black;
+        }
+      }
+    }
+    .link-aktif {
+      display: block;
+    }
+  }
+  @keyframes link {
+    from {
+      transform: translateX(-500px);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 }

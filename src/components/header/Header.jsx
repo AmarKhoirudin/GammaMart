@@ -1,31 +1,43 @@
-import React from "react";
-import "./Header.scss";
-import Brand from "../../assets/img/logo.svg";
-import { NavLink as Link } from "react-router-dom";
-const Header = () => {
+import React from 'react';
+import './Header.scss';
+import Brand from '../../assets/img/logo.svg';
+import { NavLink as Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+// import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faBars);
+
+const Header = ({ showNav, className }) => {
   return (
-    <div className="header">
-      <div className="brand">
-        <Link to="/" exact>
-          <img src={Brand} alt="" />
-          <span>POS</span>
+    <div className='header'>
+      <div className='brand'>
+        <Link to='/' exact activeClassName='home-active'>
+          <img src={Brand} alt='' />
+          <span>GPOS</span>
         </Link>
       </div>
-      <div className="link">
+      <div className='bar'>
+        <i>
+          <FontAwesomeIcon icon={faBars} onClick={showNav} />
+        </i>
+      </div>
+      <div className={`link ${className}`}>
         <ul>
           <li>
-            <Link to="/about" activeClassName="active">
-              Tentang Kami
+            <Link to='/about' activeClassName='active'>
+              about
             </Link>
           </li>
           <li>
-            <Link to="/login" activeClassName="active">
-              Masuk
+            <Link to='/login' activeClassName='active'>
+              login
             </Link>
           </li>
           <li>
-            <Link to="/register" activeClassName="active">
-              coba gratis!
+            <Link to='/register' activeClassName='active'>
+              demo
             </Link>
           </li>
         </ul>
