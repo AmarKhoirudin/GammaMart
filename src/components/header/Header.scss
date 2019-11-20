@@ -80,7 +80,7 @@
       position: absolute;
       top: 120px;
       left: -40px;
-      animation: link 1s ease-in-out;
+      animation: link 0.5s ease-in-out;
       ul {
         display: block;
         li {
@@ -91,6 +91,14 @@
     }
     .link-aktif {
       display: block;
+    }
+  }
+  @keyframes link {
+    from {
+      transform: translateX(-500px);
+    }
+    to {
+      transform: translateX(0);
     }
   }
 }
