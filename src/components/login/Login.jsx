@@ -18,17 +18,23 @@ const Login = () => {
           <p>GPOS</p>
         </div>
         <div className='form'>
-          <input type='text' placeholder='username' className='username' />
-          <i>
-            <FontAwesomeIcon icon={faUserCircle} className='user' />
-          </i>
-          <input type='password' placeholder='password' className='password' />
-          <i>
-            <FontAwesomeIcon icon={faLock} className='pass' />
-          </i>
-        </div>
-        <div className='login-btn'>
-          <span>LOGIN</span>
+          <form action=''>
+            <input type='text' placeholder='username' className='username' />
+            <i>
+              <FontAwesomeIcon icon={faUserCircle} className='user' />
+            </i>
+            <input
+              type='password'
+              placeholder='password'
+              className='password'
+            />
+            <i>
+              <FontAwesomeIcon icon={faLock} className='pass' />
+            </i>
+            <div className='login-btn'>
+              <span>LOGIN</span>
+            </div>
+          </form>
         </div>
       </div>
     </div>

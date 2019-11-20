@@ -3,9 +3,8 @@
   width: 100%;
   background: url('../../assets/img/background.svg') no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   .login-wrap {
-    position: absolute;
     top: 20%;
     left: 40%;
     height: 500px;
@@ -81,8 +80,54 @@
       color: white;
     }
   }
+}
 
-  // mobile view
-  @media (max-width: 768px) {
+// mobile view
+
+@media (max-width: 768px) {
+  // .header {
+  //   display: none;
+  // }
+  .login {
+    width: 100%;
+    .login-wrap {
+      position: absolute;
+      left: 10%;
+      top: 120px !important;
+      height: 350px;
+      width: 250px;
+      top: 60px;
+      border: none;
+      .logo {
+        display: none;
+      }
+      form {
+        position: relative;
+        top: 150px;
+        left: -25px;
+        input {
+          // width: 80%;
+        }
+        .login-btn {
+          width: 100%;
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .login-wrap {
+    position: absolute;
+  }
+}
+@media (width: 320px) {
+  .login {
+    .login-wrap {
+      position: absolute;
+      left: 3%;
+      top: 50px !important;
+    }
   }
 }
