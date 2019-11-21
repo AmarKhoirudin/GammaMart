@@ -7,7 +7,8 @@ class Login extends Component {
   state = {
     name: '',
     password: '',
-    redirect: false
+    redirect: false,
+    isLoading: false
   }
   onChangeLogin = e => {
     this.setState(
@@ -26,6 +27,9 @@ class Login extends Component {
       name: this.state.name,
       password: this.state.password
     }
+    this.setState({
+      isLoading: true
+    })
     Axios.post(
       'https://rocky-refuge-01694.herokuapp.com/api/login',
       dataLogin
@@ -33,16 +37,19 @@ class Login extends Component {
       console.log(res)
       localStorage.setItem('token', res.data.access_token)
       this.setState({
-        redirect: true
+        redirect: true,
+        isLoading: false
       })
     })
   }
   render() {
-    const { name, password } = this.state
+    const { name, password, isLoading } = this.state
     const { onChangeLogin, onSubmitLogin } = this
 
     if (localStorage.getItem('token')) {
-      return <Redirect to='/' />
+      return <Redirect to='/chat' />
+    } else if (isLoading) {
+      return <h1>Loading Gan</h1>
     }
     return (
       <>
@@ -56,6 +63,7 @@ class Login extends Component {
           //   sama
           onChange={onChangeLogin}
           onSubmit={onSubmitLogin}
+          textButton='LOGIN'
         />
       </>
     )
