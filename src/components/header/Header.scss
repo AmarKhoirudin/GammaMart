@@ -67,6 +67,12 @@
   }
 }
 
+.headerBrand {
+  .link {
+    display: none;
+  }
+}
+
 // mobile view
 
 @media (max-width: 768px) {
