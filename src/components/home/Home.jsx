@@ -2,6 +2,6 @@ import React from "react";
 import "./Home.scss";
 
 const Home = () => {
-  return <>HOME</>;
+  return <>HOME Amar</>;
 };
 export default Home;
