@@ -1,7 +1,12 @@
-import React from "react";
-import "./Home.scss";
+import React from 'react'
+import './Home.scss'
+import Header from '../../container/Header'
 
 const Home = () => {
-  return <>HOME</>;
-};
-export default Home;
+  return (
+    <>
+      <Header />
+    </>
+  )
+}
+export default Home

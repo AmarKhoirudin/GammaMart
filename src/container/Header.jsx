@@ -13,13 +13,16 @@ class HeaderContainer extends Component {
   showNav = () => {
     this.setState({ className: !this.state.className });
   };
-
+  hideNav = () => {
+    this.setState({ className: false });
+  };
   render() {
     return (
       <>
         <Header
           className={this.state.className ? ' link-aktif' : ''}
           showNav={this.showNav}
+          hideNav={this.hideNav}
         />
       </>
     );

@@ -1,9 +1,11 @@
 .login {
+  // login page style
   height: 100vh;
   width: 100%;
   background: url('../../assets/img/background.svg') no-repeat;
   background-size: cover;
   background-position: right;
+  // kotak login
   .login-wrap {
     top: 20%;
     left: 40%;
@@ -34,6 +36,7 @@
       outline: none;
       padding-left: 50px;
     }
+    // input ketika focus/di klik.
     input:focus {
       outline: none;
       font-size: 16px;
@@ -42,6 +45,7 @@
     input:focus::placeholder {
       color: transparent;
     }
+    // icon user
     .user {
       position: absolute;
       left: 60px;
@@ -49,6 +53,7 @@
       font-size: 33px;
       color: #00e389ff;
     }
+    // icon password
     .pass {
       position: absolute;
       left: 60px;
@@ -56,25 +61,36 @@
       font-size: 25px;
       color: #00e389ff;
     }
+    // tombol login
     .login-btn {
-      border: 1px solid lightgreen;
-      background: #00e389ff;
+      margin: 0 auto;
       height: 30px;
       width: 80px;
-      border-radius: 5px;
-      margin: 0 auto;
-      text-align: center;
-      padding-top: 3px;
-      cursor: pointer;
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      color: white;
+
+      button {
+        border: 1px solid lightgreen;
+        background: #00e389ff;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 3px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: white;
+      }
+
+      button:hover {
+        background: white;
+        color: #00e389ff;
+      }
     }
-    .login-btn:hover {
-      background: white;
-      color: #00e389ff;
-    }
+    // .login-btn:hover {
+    //   background: white;
+    //   color: #00e389ff;
+    // }
     .login-btn:focus {
       background: #00e389ff;
       color: white;
@@ -99,15 +115,14 @@
       top: 60px;
       border: none;
       .logo {
-        display: none;
+        position: absolute;
+        left: -30px;
+        top: -80px;
       }
       form {
         position: relative;
         top: 150px;
         left: -25px;
-        input {
-          // width: 80%;
-        }
         .login-btn {
           width: 100%;
           margin-left: 50px;
