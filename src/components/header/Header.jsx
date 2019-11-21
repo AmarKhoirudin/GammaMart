@@ -1,17 +1,17 @@
-import React from 'react';
-import './Header.scss';
-import Brand from '../../assets/img/logo.svg';
-import { NavLink as Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import React from 'react'
+import './Header.scss'
+import Brand from '../../assets/img/logo.svg'
+import { NavLink as Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faBars);
+library.add(faBars)
 
-const Header = ({ showNav, className, hideNav }) => {
+const Header = ({ showNav, className, hideNav, headerClass }) => {
   return (
-    <div className='header'>
+    <div className={`header ${headerClass}`}>
       <div className='brand'>
         <Link to='/' exact activeClassName='home-active'>
           <img src={Brand} alt='' />
@@ -43,6 +43,6 @@ const Header = ({ showNav, className, hideNav }) => {
         </ul>
       </div>
     </div>
-  );
-};
-export default Header;
+  )
+}
+export default Header
