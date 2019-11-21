@@ -3,6 +3,7 @@
   top: 20px;
   height: 60px;
   width: 100%;
+  // logo gpos
   .brand {
     a {
       text-decoration: none;
@@ -12,6 +13,7 @@
       margin-left: 50px;
       margin-top: 5px;
       height: 50px;
+      animation: brand 1.5s ease-in-out;
     }
     span {
       font-size: 40px;
@@ -21,6 +23,18 @@
       margin-left: 10px;
     }
   }
+  // animasi brand logo
+
+  @keyframes brand {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  // navlink
   .link {
     text-transform: uppercase;
 
@@ -40,14 +54,16 @@
       }
     }
   }
+  // menu icon
   .bar {
     display: none;
   }
+  // className when active
   .active {
-    color: green;
-    padding: 3px 15px;
-    border: 3px solid rgb(0, 253, 152);
-    border-radius: 20px;
+    padding: 20px 0px;
+    border-bottom: 5px solid white;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
   }
 }
 
@@ -60,9 +76,7 @@
       border: none;
     }
     .brand {
-      display: flex;
-      justify-content: center;
-      margin-left: -200px;
+      display: none;
     }
     .bar {
       display: block;
@@ -80,7 +94,7 @@
       animation: link 0.5s ease-in-out;
       ul {
         display: block;
-        li {
+        li a {
           margin-top: 20px !important;
           color: black;
         }

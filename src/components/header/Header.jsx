@@ -9,7 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faBars);
 
-const Header = ({ showNav, className }) => {
+const Header = ({ showNav, className, hideNav }) => {
   return (
     <div className='header'>
       <div className='brand'>
@@ -24,7 +24,7 @@ const Header = ({ showNav, className }) => {
         </i>
       </div>
       <div className={`link ${className}`}>
-        <ul>
+        <ul onClick={hideNav}>
           <li>
             <Link to='/about' activeClassName='active'>
               about
