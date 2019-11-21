@@ -17,9 +17,10 @@ class Login extends Component {
     );
   };
 
-  onSubmitLogin=() => {
-      alert("berhasil bambang")
-  }
+  onSubmitLogin = e => {
+    e.preventDefault();
+    alert("berhasil bambang");
+  };
   render() {
     const { name, password } = this.state;
     const { onChangeLogin, onSubmitLogin } = this;
