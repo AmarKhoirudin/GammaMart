@@ -1,10 +1,10 @@
-import ActionType from "../Action/ActionType";
+// import ActionType from "../Action/ActionType";
 
-const globalState = {};
+const globalState = {}
 
 export const rootReducer = (state = globalState, action) => {
   switch (action.type) {
     default:
-      return state;
+      return state
   }
-};
+}

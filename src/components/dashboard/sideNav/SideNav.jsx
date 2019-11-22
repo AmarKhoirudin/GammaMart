@@ -28,6 +28,11 @@ const SideNav = () => {
               <span>CHARTS</span>
             </Link>
           </li>
+          <li>
+            <Link to='#' activeClassName='active'>
+              <span>TABLE</span>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
