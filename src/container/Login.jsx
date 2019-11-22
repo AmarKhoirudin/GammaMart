@@ -31,7 +31,7 @@ class Login extends Component {
       isLoading: true
     })
     Axios.post(
-      'https://rocky-refuge-01694.herokuapp.com/api/login',
+      'https://stark-harbor-77200.herokuapp.com/api/login',
       dataLogin
     ).then(res => {
       console.log(res)
@@ -47,7 +47,7 @@ class Login extends Component {
     const { onChangeLogin, onSubmitLogin } = this
 
     if (localStorage.getItem('token')) {
-      return <Redirect to='/chat' />
+      return <Redirect to='/coba' />
     } else if (isLoading) {
       return <h1>Loading Gan</h1>
     }
