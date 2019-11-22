@@ -21,7 +21,7 @@ const Login = ({
 }) => {
   return (
     <>
-      <Header />
+      <Header headerClass='loginHeader' />
       <div className='login'>
         <div className='login-wrap'>
           <div className='logo'>
