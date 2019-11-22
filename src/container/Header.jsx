@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import Header from '../components/header/Header';
+import React, { Component } from 'react'
+import Header from '../components/header/Header'
 
 class HeaderContainer extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       className: false
-    };
+    }
   }
 
   showNav = () => {
-    this.setState({ className: !this.state.className });
-  };
+    this.setState({ className: !this.state.className })
+  }
   hideNav = () => {
-    this.setState({ className: false });
-  };
+    this.setState({ className: false })
+  }
   render() {
     return (
       <>
@@ -25,7 +25,7 @@ class HeaderContainer extends Component {
           hideNav={this.hideNav}
         />
       </>
-    );
+    )
   }
 }
-export default HeaderContainer;
+export default HeaderContainer

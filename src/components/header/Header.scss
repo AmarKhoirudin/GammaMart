@@ -60,10 +60,17 @@
   }
   // className when active
   .active {
-    padding: 20px 0px;
+    padding: 10px 0px;
     border-bottom: 5px solid white;
     border-bottom-right-radius: 5%;
     border-bottom-left-radius: 5%;
+  }
+}
+
+.headerBrand {
+  display: block;
+  .link {
+    display: none;
   }
 }
 
@@ -74,9 +81,6 @@
     .active {
       padding: 0;
       border: none;
-    }
-    .brand {
-      display: none;
     }
     .bar {
       display: block;
@@ -118,6 +122,7 @@
       display: block;
     }
   }
+
   @keyframes link {
     from {
       transform: translateX(-500px);
@@ -125,5 +130,16 @@
     to {
       transform: translateX(0);
     }
+  }
+  .headerBrand {
+    .brand {
+      display: block;
+    }
+    .bar {
+      display: none;
+    }
+  }
+  .loginHeader {
+    display: none;
   }
 }

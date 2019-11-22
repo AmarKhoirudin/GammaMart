@@ -2,9 +2,9 @@
   // login page style
   height: 100vh;
   width: 100%;
-  background: url('../../assets/img/background.svg') no-repeat;
-  background-size: cover;
-  background-position: right;
+  // background: url('../../assets/img/background.svg') no-repeat;
+  // background-size: cover;
+  // background-position: right;
   // kotak login
   .login-wrap {
     top: 20%;
@@ -142,7 +142,7 @@
     .login-wrap {
       position: absolute;
       left: 3%;
-      top: 50px !important;
+      top: 100px !important;
     }
   }
 }
