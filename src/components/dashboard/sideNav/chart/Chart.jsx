@@ -6,7 +6,6 @@ const Chart = () => {
   return (
     <div className='chart'>
       <SideNav />
-      <h1>Chart</h1>
     </div>
   )
 }
