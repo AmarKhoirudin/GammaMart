@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { Home, About,Coba } from '../components/'
+import { Home, About } from '../components/'
 import Login from '../container/Login'
 import Dashboard from '../components/dashboard/Dashboard'
 import error404 from '../components/404/404'
@@ -13,6 +13,7 @@ import {
   Table,
   Settings
 } from '../components/dashboard/sideNav/index'
+import Coba from "../container/Cobaco"
 
 const Routes = () => {
   return (
