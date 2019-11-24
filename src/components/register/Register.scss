@@ -1,0 +1,207 @@
+.register {
+  height: 100vh;
+  width: 100%;
+  background: url('../../assets/img/bg-register.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .register-wrap {
+    display: flex;
+    position: relative;
+    top: 10%;
+    height: 550px;
+    width: 85%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    .header {
+      ul {
+        display: none;
+      }
+    }
+    .clip-art {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      img {
+        height: 250px;
+      }
+    }
+    .register-form {
+      position: absolute;
+      right: 0;
+      height: 600px;
+      width: 500px;
+      .text-wrap {
+        position: relative;
+        top: 100px;
+        margin: 0 auto;
+        width: 80%;
+        h4 {
+          position: relative;
+          left: -33%;
+          font-size: 30px;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          font-weight: 100;
+          letter-spacing: 3px;
+        }
+        span {
+          line-height: 1px !important;
+          font-size: 14px;
+          width: 80%;
+        }
+      }
+    }
+    form {
+      text-align: center;
+      position: absolute;
+      top: 200px;
+      left: 10%;
+      background: white;
+      .name,
+      .email {
+        margin-left: -300px;
+      }
+
+      span {
+        font-size: 16px;
+        margin-left: -270px;
+        color: black;
+        letter-spacing: 1px;
+      }
+      input[type='text'] {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        font-size: 16px;
+      }
+
+      input[type='email'] {
+        border: none;
+        border-bottom: 1px solid lightgray;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        font-size: 16px;
+      }
+      input[type='password'] {
+        border: none;
+        font-size: 21px;
+        border-bottom: 1px solid lightgray;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      input {
+        display: flex;
+        height: 30px;
+        width: 350px;
+        outline: none;
+        letter-spacing: 1px;
+        outline: none;
+        padding-left: 10px;
+      }
+
+      .userIcon,
+      .passwordIcon {
+        color: #00e389ff;
+        font-size: 28px;
+      }
+      .userIcon,
+      .passwordIcon {
+        position: absolute;
+        top: 5px;
+        left: 15px;
+      }
+      .passwordIcon {
+        top: 55px;
+      }
+
+      .create-btn,
+      .login-btn {
+        position: absolute;
+        margin-top: 20px;
+        border-radius: 60px;
+        height: 40px;
+        width: 150px;
+        background: rgb(255, 254, 254);
+        border: 1px solid rgb(226, 226, 226);
+        padding: 8px 0px;
+        text-align: center;
+        font-weight: 400;
+        cursor: pointer;
+        span {
+          font-size: 14px;
+          margin-left: 0;
+          color: black;
+        }
+      }
+      .login-btn {
+        left: 170px;
+        background: rgb(105, 170, 255);
+        span {
+          color: white;
+        }
+      }
+      .create-btn:hover {
+        background: rgb(105, 170, 255);
+        span {
+          color: white;
+        }
+      }
+      .login-btn:hover {
+        background: white;
+        span {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+// mobile view
+@media (max-width: 767px) {
+  .register {
+    position: absolute;
+    background: none;
+    .text-wrap {
+      display: none;
+    }
+    .clip-art {
+      display: none;
+    }
+    .header {
+      position: absolute;
+      left: 30%;
+      .bar {
+        display: none;
+      }
+    }
+    .register-form {
+      position: absolute;
+      left: 0;
+      height: 600px;
+      width: 100%;
+      form {
+        width: auto;
+        input {
+          height: 80px;
+          width: 400px;
+        }
+        .name,
+        .email {
+          margin-left: -330px;
+        }
+        span {
+          margin-left: -300px;
+        }
+        input[type='password'] {
+          border-bottom: none;
+        }
+      }
+    }
+    .login-btn {
+      display: none;
+    }
+  }
+}

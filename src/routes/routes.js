@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home, About } from '../components/'
 import Login from '../container/Login'
+import Register from '../components/register/Register'
 import Dashboard from '../components/dashboard/Dashboard'
 import error404 from '../components/404/404'
 import {
@@ -22,6 +23,7 @@ const Routes = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
+        <Route exact path='/register' component={Register} />
         <Route path='/about' component={About} />
         <Route path='/profile' component={Profile} />
         <Route path='/purchase' component={Purchase} />
