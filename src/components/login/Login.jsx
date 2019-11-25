@@ -20,48 +20,46 @@ const Login = ({
   textButton
 }) => {
   return (
-    <>
-      <Header headerClass='loginHeader' />
-      <div className='login'>
-        <div className='login-wrap'>
-          <div className='logo'>
-            <img src={Logo} alt='' />
-            <p>GPOS</p>
-          </div>
-          <div className='form'>
-            <form onSubmit={onSubmit}>
-              <input
-                type='text'
-                placeholder='username'
-                className='username'
-                name={nama}
-                value={valueName}
-                onChange={onChange}
-                autoComplete='off'
-              />
-              <i>
-                <FontAwesomeIcon icon={faUserCircle} className='user' />
-              </i>
-              <input
-                type='password'
-                placeholder='password'
-                className='password'
-                name={namePassword}
-                value={valuePassword}
-                onChange={onChange}
-                autoComplete='off'
-              />
-              <i>
-                <FontAwesomeIcon icon={faLock} className='pass' />
-              </i>
-              <div className='login-btn'>
-                <button type='submit'>{textButton}</button>
-              </div>
-            </form>
-          </div>
+    <div className='login'>
+      <Header headerClass='loginHeader' />.
+      <div className='login-wrap'>
+        <div className='logo'>
+          <img src={Logo} alt='' />
+          <p>GPOS</p>
+        </div>
+        <div className='form'>
+          <form onSubmit={onSubmit}>
+            <input
+              type='text'
+              placeholder='username'
+              className='username'
+              name={nama}
+              value={valueName}
+              onChange={onChange}
+              autoComplete='off'
+            />
+            <i>
+              <FontAwesomeIcon icon={faUserCircle} className='user' />
+            </i>
+            <input
+              type='password'
+              placeholder='password'
+              className='password'
+              name={namePassword}
+              value={valuePassword}
+              onChange={onChange}
+              autoComplete='off'
+            />
+            <i>
+              <FontAwesomeIcon icon={faLock} className='pass' />
+            </i>
+            <div className='login-btn'>
+              <button type='submit'>{textButton}</button>
+            </div>
+          </form>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

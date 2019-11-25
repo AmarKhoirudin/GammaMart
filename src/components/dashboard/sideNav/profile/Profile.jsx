@@ -1,4 +1,5 @@
 import React from 'react'
+import './Profile.scss'
 import SideNav from '../../../../container/SideNav'
 
 const Profile = () => {

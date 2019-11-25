@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home, About } from '../components/'
 import Login from '../container/Login'
+import Register from '../components/register/Register'
 import Dashboard from '../components/dashboard/Dashboard'
 import error404 from '../components/404/404'
 import {
@@ -14,12 +15,15 @@ import {
   Settings
 } from '../components/dashboard/sideNav/index'
 
+import Coba from '../container/Cobaco'
+
 const Routes = () => {
   return (
     <Router>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/login' component={Login} />
+        <Route exact path='/register' component={Register} />
         <Route path='/about' component={About} />
         <Route path='/profile' component={Profile} />
         <Route path='/purchase' component={Purchase} />
@@ -28,6 +32,7 @@ const Routes = () => {
         <Route path='/chart' component={Chart} />
         <Route path='/table' component={Table} />
         <Route path='/dashboard' component={Dashboard} />
+        <Route path='/coba' component={Coba} />
         <Route path='/settings' component={Settings} />
         <Route component={error404} />
       </Switch>

@@ -5,6 +5,7 @@ import { NavLink as Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
+  faDatabase,
   faShoppingCart,
   faDollarSign,
   faTable,
@@ -12,10 +13,13 @@ import {
   faBox,
   faCog,
   faSignOutAlt,
-  faUser
+  faUser,
+  faWindowClose,
+  faAlignJustify
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+  faDatabase,
   faShoppingCart,
   faDollarSign,
   faTable,
@@ -23,17 +27,38 @@ library.add(
   faBox,
   faCog,
   faSignOutAlt,
-  faUser
+  faUser,
+  faAlignJustify,
+  faWindowClose
 )
 
-const SideNav = ({ logout }) => {
+const SideNav = ({ logout, navExpand, showNav, hideNav }) => {
   return (
-    <div className='sidenav'>
+    <div className={navExpand}>
       <div className='brand'>
         <img src={Brand} alt='' />
+        <p>Admin</p>
+      </div>
+      <div className='arrow' onClick={showNav}>
+        <i>
+          <FontAwesomeIcon icon={faAlignJustify} />
+        </i>
+      </div>
+      <div className='hideArrow' onClick={hideNav}>
+        <i>
+          <FontAwesomeIcon icon={faWindowClose} />
+        </i>
       </div>
       <div className='nav-link'>
         <ul>
+          <li>
+            <Link to='/dashboard' activeClassName='active'>
+              <span>DASHBOARD</span>
+              <i>
+                <FontAwesomeIcon icon={faDatabase} />
+              </i>
+            </Link>
+          </li>
           <li>
             <Link to='/profile' activeClassName='active'>
               <span>PROFILE</span>

@@ -5,17 +5,28 @@ class SideNavContainer extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {}
+    this.state = {
+      navExpand: false
+    }
   }
 
   logOut = () => {
     return alert('bisa')
   }
-
+  showNav = () => {
+    this.setState({
+      navExpand: !this.state.navExpand
+    })
+  }
   render() {
     return (
       <>
-        <SideNav logout={this.logOut} />
+        <SideNav
+          logout={this.logOut}
+          showNav={this.showNav}
+          hideNav={this.showNav}
+          navExpand={this.state.navExpand ? 'sidenav' : 'hidenav'}
+        />
       </>
     )
   }

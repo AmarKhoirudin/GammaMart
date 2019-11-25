@@ -6,7 +6,6 @@ const Table = () => {
   return (
     <div className='table'>
       <SideNav />
-      <h1>Table</h1>
     </div>
   )
 }
