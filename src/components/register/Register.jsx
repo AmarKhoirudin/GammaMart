@@ -21,14 +21,20 @@ const Register = () => {
           </div>
           <form>
             {/* jangan lupa dikasih fungsi maximal value setiap input. */}
+            <span className='username'>Username</span>
+            <input type='text' autoComplete='off' />
             <span className='name'>Name</span>
             <input type='text' autoComplete='off' />
             <span className='email'>E-mail</span>
             <input type='email' autoComplete='off' />
-            <span className='username'>Username</span>
-            <input type='text' autoComplete='off' />
             <span className='password'>Password</span>
             <input type='password' />
+            {/* <div className='custom-select'>
+              <select>
+                <option value='1'>Store Owner</option>
+                <option value='2'>Admin</option>
+              </select>
+            </div> */}
             <div className='create-btn'>
               <span>Create Account</span>
             </div>

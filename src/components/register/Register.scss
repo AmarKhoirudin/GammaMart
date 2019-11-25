@@ -136,6 +136,15 @@
           color: black;
         }
       }
+      .custom-select {
+        margin-top: 20px;
+        select {
+          letter-spacing: 1px;
+        }
+        select-selected {
+          letter-spacing: 1px;
+        }
+      }
       .login-btn {
         left: 170px;
         background: rgb(105, 170, 255);
@@ -164,6 +173,11 @@
   .register {
     position: absolute;
     background: none;
+    height: 100vh;
+    width: 100%;
+    .register-wrap {
+      height: auto;
+    }
     .text-wrap {
       display: none;
     }
@@ -172,28 +186,30 @@
     }
     .header {
       position: absolute;
-      left: 30%;
+      left: 0%;
+      top: -20px;
       .bar {
         display: none;
       }
     }
     .register-form {
-      position: absolute;
+      position: relative;
       left: 0;
-      height: 600px;
-      width: 100%;
+      height: 100% !important;
+      width: 50% !important;
       form {
-        width: auto;
+        position: absolute;
+        left: 50%;
+        top: 150px;
         input {
-          height: 80px;
-          width: 400px;
+          width: 160px;
         }
         .name,
         .email {
-          margin-left: -330px;
+          margin-left: -280px;
         }
         span {
-          margin-left: -300px;
+          margin-left: -250px;
         }
         input[type='password'] {
           border-bottom: none;
